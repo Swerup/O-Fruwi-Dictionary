@@ -94,19 +94,19 @@ body{
 ul::-webkit-scrollbar{
   width: 0px;
 }
-#word{
+.word{
   font-size: 22px;
   font-weight: 500;
 }
-#speechpart{
+.sp{
   font-size: 12px;
   color: #989898;
 }
-#sound{
+.IPA{
   font-size: 12px;
   color: #989898;
 }
-#meaning{
+.mean{
 	font-size: 15px;
 	color: #7E7E7E;
 	max-height: 215px;

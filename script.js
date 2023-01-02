@@ -1,61 +1,62 @@
 //Constant Variables
-const wrapper = document.querySelector(".wrapper"),//Everything Except BG
-searchInput = wrapper.querySelector("input"),
-infoText = wrapper.querySelector(".info-text"),//Info, Shows up sometimes
-mainword = document.getElementById("word"),
-speechpart = document.getElementById("speechpart"),
-sound = document.getElementById("sound"),
-meaning = document.getElementById("meaning");
+const wrapper = document.querySelector(".wrapper");//Everything Except BG
 
 //Enter pressed
-searchInput.addEventListener("keyup", e =>{
+wrapper.querySelector("input").addEventListener("keyup", e =>{
     let input = e.target.value.replace(/\s+/g, ' ');
     if(e.key == "Enter" && input) {
-		infoText.innerHTML = input;
+		wrapper.querySelector(".info-text").innerHTML = input;
 		write(input); 
 	}
 });
 
 //List Word Data
-const Word = [
+const INPWord = [
 	"ko",
 	"kopo",
 	"tat"
 ];
-const Word1 = [
-	"Ko",
-	"Kopo",
-	"tat"
+const NumDef =[
+	2,
+	2,
+	8
+]
+const Word = [
+	["Ko", "Koño"],
+	["Kopo", "Kopoño"],
+	["tat", "tlat"]
 ];
-const SpeechPart1 = [
-	"Mood - Imperative",
-	"Mood - Imperative",
-	"Determiner - Quantifier"
+const SpeechPart = [
+	["Mood", "Mood"],
+	["Mood", "Mood"],
+	["Determiner - Quantifier","Determiner - Quantifier"]
 ];
-const Sound1 = [
-	"/ko/",
-	"/kopo/",
-	"/tat/"
+const Sound = [
+	["ko", "koŋo"],
+	["kopo", "kopoŋo"],
+	["tat", "tlat"]
 ];
-const Meaning1 = [
-	"Imperative mood, singular, for instructions, orders or requests.",
-	"Imperative mood, singular, for Advice.",
-	"Universal full quantifier, translation:\"all\" ex: all dogs"
+const Meaning = [
+	["Imperative mood, singular, for instructions, orders or requests.","plural"],
+	["Imperative mood, singular, for Advice.", "plural"],
+	["Universal full quantifier, translation:\"all\" ex: all dogs","Universal almost full quantifier, translation:\" almost all\" ex: almost all dogs"]
 ];
 
 //Puts data in website
 function write(input){
 	wrapper.classList.remove("active");
 	//Find Index in array 'Word'
-	let i = Word.indexOf(input.toLowerCase());
+	let i = INPWord.indexOf(input.toLowerCase());
 	
 	if (i == -1) {
-		infoText.innerHTML = `Can't find the meaning of <span>"${input}"</span>. Please, try to search for another word.`;
+		wrapper.querySelector(".info-text").innerHTML = `Can't find the meaning of <span>"${input}"</span>. Please, try to search for another word.`;
 	} else {
 		wrapper.classList.add("active");
-		mainword.innerText = Word1[i];
-        speechpart.innerText = SpeechPart1[i];
-		sound.innerText = Sound1[i];
-        meaning.innerText = Meaning1[i];
+		for (let j=0;j<NumDef[i];j++){
+			document.getElementById("word"+j).innerText = Word[i][j];
+        	document.getElementById("sp"+j).innerText = SpeechPart[i][j];
+			document.getElementById("IPA"+j).innerText = "/"+Sound[i][j]+"/";
+        	document.getElementById("mean"+j).innerText = Meaning[i][j];
+		}
 	}
 }
