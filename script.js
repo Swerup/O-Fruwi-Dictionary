@@ -13,38 +13,80 @@ wrapper.querySelector("input").addEventListener("keyup", e =>{
 //List Word Data
 const INPWord = [
 	"ko",
-	"kopo",
 	"ker",
+	"kañ",
+	"val",
+	"myi",
+	"cul",
+	"nuz",
+	"senuz",
+	"öpo",
+	"kod",
 	"tat"
 ];
 const NumDef =[
 	2,
-	2,
+	1,
+	1,
+	1,
+	1,
+	1,
+	1,
+	1,
+	1,
 	1,
 	8
 ]
 const Word = [
 	["Ko", "Koñ"],
-	["Kopo", "Kopoñ"],
 	["Ker"],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
 	["tat", "tlat"]
 ];
 const SpeechPart = [
 	["Mood", "Mood"],
-	["Mood", "Mood"],
 	["Mood"],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
 	["Determiner - Quantifier","Determiner - Quantifier"]
 ];
 const Sound = [
 	["ko", "koŋ"],
-	["kopo", "kopoŋ"],
 	["ker"],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
 	["tat", "tlat"]
 ];
 const Meaning = [
-	["Imperative mood, singular, for instructions, orders or requests.","plural"],
-	["Imperative mood, singular, for Advice.", "plural"],
+	["Imperative mood, singular","plural"],
 	["Interrogative mood, WH questions"],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
 	["Universal full quantifier, translation:\"all\" ex: all dogs","Universal almost full quantifier, translation:\" almost all\" ex: almost all dogs"]
 ];
 
