@@ -14,31 +14,37 @@ wrapper.querySelector("input").addEventListener("keyup", e =>{
 const INPWord = [
 	"ko",
 	"kopo",
+	"ker",
 	"tat"
 ];
 const NumDef =[
 	2,
 	2,
+	1,
 	8
 ]
 const Word = [
-	["Ko", "Koño"],
-	["Kopo", "Kopoño"],
+	["Ko", "Koñ"],
+	["Kopo", "Kopoñ"],
+	["Ker"],
 	["tat", "tlat"]
 ];
 const SpeechPart = [
 	["Mood", "Mood"],
 	["Mood", "Mood"],
+	["Mood"],
 	["Determiner - Quantifier","Determiner - Quantifier"]
 ];
 const Sound = [
-	["ko", "koŋo"],
-	["kopo", "kopoŋo"],
+	["ko", "koŋ"],
+	["kopo", "kopoŋ"],
+	["ker"],
 	["tat", "tlat"]
 ];
 const Meaning = [
 	["Imperative mood, singular, for instructions, orders or requests.","plural"],
 	["Imperative mood, singular, for Advice.", "plural"],
+	["Interrogative mood, WH questions"],
 	["Universal full quantifier, translation:\"all\" ex: all dogs","Universal almost full quantifier, translation:\" almost all\" ex: almost all dogs"]
 ];
 
